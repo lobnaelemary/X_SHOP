@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - X-Shop</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/media.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">X-Shop</div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="product.html">Products</a></li>
+                    <li><a href="cart.html">Cart 🛒<span class="cart-badge" id="cartBadge">0</span></a></li>
+                    <li id="authLink"><a href="auth.html">Login</a></li>
+                    <li id="userInfo" class="hidden"><span class="user-info" id="userDisplay"></span></li>
+                    <li id="logoutLink" class="hidden"><a href="#" onclick="logout()">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Products Section -->
+    <div class="container">
+        <section id="products" class="page-section active">
+            <h2 class="section-title">Our Products</h2>
+            
+            <div class="filters">
+                <div class="filter-row">
+                    <input type="text" id="searchInput" class="search-box" placeholder="Search products...">
+                    <select id="categoryFilter" class="category-filter">
+                        <option value="">All Categories</option>
+                        <option value="Men's clothing">Men's clothing</option>
+                        <option value="women's clothing">women's clothing</option>
+                        <option value="watches">watches</option>
+                        <option value="glasses">glasses</option>
+                        <option value="accessories">Accessories</option>
+                        <option value="shoes">shoes</option>
+                        <option value="perfume">perfume</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid" id="productsGrid"></div>
+
+            <div id="noProducts" class="empty-state hidden">
+                <div class="icon">📦</div>
+                <h3>No products found</h3>
+                <p>Try adjusting your search or filters</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2025 X-Shop. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="https://www.facebook.com/" target="_blank"> <img src="../image/facebook.svg" alt="facebook icon" class="facebook-icon"> </a>
+                <a href="https://www.instagram.com/" target="_blank"> <img src="../image/instagram.svg" alt="instagram icon" class="instagram-icon"></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="../js/main.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/product.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/order.js"></script>
+    <script src="../js/thanks.js"></script>
+</body>
+</html>

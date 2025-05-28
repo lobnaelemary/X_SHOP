@@ -1,0 +1,146 @@
+/* responsive.css */
+
+@media (min-width: 1201px) {
+    .nav-container, .container, .footer-container {
+        max-width: 1200px;
+        padding: 0 2rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .nav-container, .container, .footer-container {
+        padding: 0 1.5rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .nav-container, .container, .footer-container {
+        padding: 0 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 1rem;
+        gap: 0.8rem;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .cart-item-image {
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+    }
+
+    .cart-item-details {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .quantity-controls {
+        justify-content: flex-start;
+        margin-top: 0.5rem;
+    }
+
+    .remove-item {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .cart-actions {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .checkout-btn, .clear-cart-btn {
+        width: 100%;
+    }
+
+    .order-steps {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .order-step {
+        width: 48%;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin-bottom: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .filter-row {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .search-box, .category-filter {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1rem;
+    }
+
+    .product-image {
+        height: 160px;
+    }
+    
+    .product-title {
+        font-size: 1.1rem;
+        min-height: unset;
+    }
+
+    .auth-container {
+        padding: 1.5rem;
+        margin: 1rem auto;
+    }
+
+    .auth-form h2 {
+        font-size: 1.8rem;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+}

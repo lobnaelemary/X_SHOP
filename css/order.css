@@ -1,0 +1,206 @@
+/* Order Styles */
+.order-container {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.order-steps {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    position: relative;
+    padding: 0 1rem;
+}
+
+.order-step {
+    flex: 1;
+    margin-bottom: 2rem;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.order-step.active {
+    opacity: 1;
+    color: #667eea;
+}
+
+.order-step.completed {
+    opacity: 1;
+    color: #28a745;
+}
+
+.step-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+    background: #f0f2f5;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 1rem auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.order-step.active .step-icon {
+    background: #667eea;
+    color: white;
+}
+
+.order-step.completed .step-icon {
+    background: #28a745;
+    color: white;
+}
+
+.step-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+.order-step.active .step-title {
+    color: #667eea;
+}
+
+.order-step.completed .step-title {
+    color: #28a745;
+}
+
+.step-description {
+    color: #666;
+    font-size: 1rem;
+}
+
+/* Order Progress Bar */
+.order-progress {
+    background: #f0f2f5;
+    height: 4px;
+    border-radius: 2px;
+    margin: -3.5rem 0 2rem 0; /* Adjust margin to align with steps */
+    overflow: hidden;
+    position: relative;
+    top: 30px; /* Adjust to sit below icons */
+    z-index: 1;
+}
+
+.progress-bar {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 100%;
+    transition: width 0.6s ease-in-out;
+    width: 25%; /* Default to first step completed or processing */
+}
+
+.admin-panel {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+}
+
+.admin-panel h3 {
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.order-item-admin {
+    background: white;
+    border: 1px solid #e1e5e9;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.order-item-admin p {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.order-item-admin strong {
+    color: #333;
+}
+
+.order-item-admin .status {
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.order-item-admin .status-confirmed {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.order-item-admin .status-shipped {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.order-item-admin .status-delivered {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Order Actions */
+.order-actions {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.order-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: #f0f2f5;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.order-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.btn-secondary:hover {
+    background: #e1e5e9;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.1);
+}
